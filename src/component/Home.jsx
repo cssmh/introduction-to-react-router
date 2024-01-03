@@ -1,18 +1,21 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import './Home.css'
 
 const Home = () => {
-    return (
-        <div>
-            <h1 style={{color: 'yellow'}}>Welcome Home!</h1>
-            <h3>This is nested routes, not gonna changed</h3>
-            <button><a href="/">Home</a></button>
-            <button><a href="/about">About</a></button>
-            <button><a href="/blog">Blog</a></button>
-            <button><a href="/contact">Contact Us</a></button>
-            <button><a href="/root">Route</a></button>
-            <Outlet></Outlet>
-        </div>
-    );
+  return (
+    <div>
+      <h1 style={{ color: "yellow" }}>Welcome Home!</h1>
+      <h3>This is nested routes, not gonna changed</h3>
+      <nav>
+        <Link to={"/"}>Home</Link>
+        <Link to={"/about"}>About</Link>
+        <Link to={"/blog"}>Blog</Link>
+        <Link to={"/contact"}>Contact Us</Link>
+        <Link to={"/root"}>Route</Link>
+      </nav>
+      <Outlet></Outlet>
+    </div>
+  );
 };
 
 export default Home;
