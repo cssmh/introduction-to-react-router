@@ -6,7 +6,7 @@ const User = ({getUsers}) => {
     const userStyle = {
         border: '1px solid yellow',
         borderRadius: '10px',
-        paddingBottom: '10px'
+        padding: '10px 10px 24px 10px '
     }
     return (
         <div style={userStyle}>

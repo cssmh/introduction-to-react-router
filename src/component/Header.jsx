@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <h1 style={{ color: "yellow" }}>Welcome Home!</h1>
-      <h3>This is nested routes, not gonna changed</h3>
+      <h1 style={{ color: "yellow" }}>React Router</h1>
       <nav>
         <Link to={"/"}>Home</Link>
         <Link to={"/about"}>About</Link>
