@@ -1,16 +1,20 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const PostDetails = () => {
   const detailsDataAll = useLoaderData();
   const { id, title } = detailsDataAll;
 
+  const handleNav = useNavigate()
+
+  const postHandleButton = () => {
+    handleNav(-1)
+  }
+
   return (
     <div>
       <h2>ID: {id}</h2>
       <h3>Title: {title}</h3>
-      <nav>
-        <Link to={"/posts"}>Back to all Posts</Link>
-      </nav>
+      <button onClick={postHandleButton}>Back to post</button>
     </div>
   );
 };

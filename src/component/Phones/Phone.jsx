@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Phone = ({getPhones}) => {
     console.log(getPhones);
 
@@ -11,12 +11,18 @@ const Phone = ({getPhones}) => {
         padding: '0px 35px 15px 35px'
     }
 
+    const navButton = useNavigate()
+
+    const phoneHandlerButton = () => {
+        navButton(`/phones/${slug}`)
+    }
+
     return (    
         <div style={phoneStyle}>
             <h3>Brand: {brand}</h3>
             <p>{phone_name}</p>
             <img src={image} alt="" />
-            <nav><Link to={`/phones/${slug}`}>Details</Link></nav>
+            <button onClick={phoneHandlerButton}>Details</button>
         </div>
     );
 };

@@ -1,10 +1,15 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const PhoneDetails = () => {
   const phoneDetailsHere = useLoaderData();
 //   console.log(phoneDetailsHere.data);
 
   const { name, image, releaseDate, mainFeatures } = phoneDetailsHere.data;
+
+  const backNav = useNavigate()
+  const backButton = () => {
+    backNav(-1)
+  }
 
   return (
     <div>
@@ -20,6 +25,7 @@ const PhoneDetails = () => {
       </div>
       <p>Chip: {mainFeatures?.chipSet}</p>
       <p>DisplaySize: {mainFeatures.displaySize}</p>
+      <button onClick={backButton}>Back to allPhone</button>
     </div>
   );
 };
