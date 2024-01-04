@@ -14,7 +14,7 @@ const User = ({getUsers}) => {
             <p>Email: {email}</p>
             <p>Website: {website}</p>
             <nav>
-               <Link to={`/users/${id}`}>Show details</Link>
+               <Link to={`/users/${id}`}>Show Details</Link>
             </nav>
         </div>
     );

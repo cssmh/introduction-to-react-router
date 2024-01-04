@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
+import "./../index.css";
 
 const UserDetails = () => {
   const detailsData = useLoaderData();
@@ -7,7 +8,7 @@ const UserDetails = () => {
 
   return (
     <div>
-      <h2>User {id}</h2>
+      <h2>User id {id}</h2>
       <h3>Name: {name}</h3>
       <p>Email: {email}</p>
       <nav>
