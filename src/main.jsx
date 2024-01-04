@@ -11,6 +11,8 @@ import Blog from "./component/Blog.jsx";
 import Error from "./component/Error.jsx";
 import Users from "./component/Users.jsx";
 import UserDetails from "./component/UserDetails.jsx";
+import Posts from "./component/Posts.jsx";
+import PostDetails from "./component/PostDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,16 @@ const router = createBrowserRouter([
         loader: ({params})=> fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         element: <UserDetails></UserDetails>
       },
+      {
+        path: "/posts",
+        loader: ()=> fetch("https://jsonplaceholder.typicode.com/posts"),
+        element: <Posts></Posts>
+      },
+      {
+        path: "/posts/:postId",
+        loader: ({params})=> fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        element: <PostDetails></PostDetails>
+      }
     ],
   }
 ]);

@@ -3,7 +3,6 @@ import "./../index.css";
 
 const UserDetails = () => {
   const detailsData = useLoaderData();
-  console.log(detailsData);
   const { id, name, email } = detailsData;
 
   return (

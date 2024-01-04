@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 const User = ({getUsers}) => {
+    console.log(getUsers);
     const { id, name, website, phone, email } = getUsers
     const userStyle = {
         border: '1px solid yellow',
