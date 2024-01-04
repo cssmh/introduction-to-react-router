@@ -11,7 +11,6 @@ const Header = () => {
         <Link to={"/users"}>Users</Link>
         <Link to={"/blog"}>Blog</Link>
         <Link to={"/contact"}>Contact Us</Link>
-        <Link to={"/root"}>Route</Link>
       </nav>
     </div>
   );
