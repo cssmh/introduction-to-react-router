@@ -11,7 +11,7 @@ const UserDetails = () => {
       <h3>Name: {name}</h3>
       <p>Email: {email}</p>
       <nav>
-        <Link to={"/users"}>Go to Users again</Link>
+        <Link to={"/users"}>Back to all Users</Link>
       </nav>
     </div>
   );

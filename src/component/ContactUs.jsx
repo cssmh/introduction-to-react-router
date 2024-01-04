@@ -1,8 +1,7 @@
 const ContactUs = () => {
     return (
         <div>
-            <h4>Contact Us</h4>
-            <p>Need any help?</p>
+            <h3>Need any help?</h3>
             <p>Call: 01118327482 or join our discord</p>
         </div>
     );
