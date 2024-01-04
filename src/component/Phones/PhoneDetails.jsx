@@ -1,15 +1,20 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const PhoneDetails = () => {
   const phoneDetailsHere = useLoaderData();
-//   console.log(phoneDetailsHere.data);
+  //   console.log(phoneDetailsHere.data);
 
+  // Showing params output (clg)
+  const getParams = useParams()
+  console.log(getParams);
+  // Showing params output (clg) end
+  
   const { name, image, releaseDate, mainFeatures } = phoneDetailsHere.data;
 
-  const backNav = useNavigate()
+  const backNav = useNavigate();
   const backButton = () => {
-    backNav(-1)
-  }
+    backNav(-1);
+  };
 
   return (
     <div>
@@ -17,8 +22,16 @@ const PhoneDetails = () => {
       <img style={{ borderRadius: "7px", width: "15%" }} src={image} alt="" />
       <p>{releaseDate}</p>
       <p>Storage: {mainFeatures.storage}</p>
-      <div style={{ display: "flex", gap: "10px", border: "1px solid yellow", padding: "0 10px", borderRadius: "10px" }}>
-      Sensors are:
+      <div
+        style={{
+          display: "flex",
+          gap: "10px",
+          border: "1px solid yellow",
+          padding: "0 10px",
+          borderRadius: "10px",
+        }}
+      >
+        Sensors are:
         {mainFeatures?.sensors?.map((sens, idx) => (
           <p key={idx}>{sens}</p>
         ))}
