@@ -14,6 +14,7 @@ import UserDetails from "./component/UserDetails.jsx";
 import Posts from "./component/Posts.jsx";
 import PostDetails from "./component/PostDetails.jsx";
 import Phones from "./component/Phones/Phones.jsx";
+import PhoneDetails from "./component/Phones/PhoneDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,11 @@ const router = createBrowserRouter([
       {
         path: "/phones",
         element: <Phones></Phones>
+      },
+      {
+        path: "/phones/:phoneSlug",
+        loader: ({params})=> fetch(`https://openapi.programming-hero.com/api/phone/${params.phoneSlug}`),
+        element: <PhoneDetails></PhoneDetails>
       }
     ],
   }
