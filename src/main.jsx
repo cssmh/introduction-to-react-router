@@ -10,6 +10,7 @@ import ContactUs from "./component/ContactUs.jsx";
 import Blog from "./component/Blog.jsx";
 import Root from "./routes/Routes.jsx";
 import Error from "./component/Error.jsx";
+import Users from "./component/Users.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs></ContactUs>,
+      },
+      {
+        path: "/users",
+        loader: ()=> fetch("https://jsonplaceholder.typicode.com/users"),
+        element: <Users></Users>
       },
     ],
   },
