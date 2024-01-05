@@ -16,6 +16,8 @@ import Posts from "./component/Posts/Posts.jsx";
 import Users from "./component/Users/Users.jsx";
 import UserDetails from "./component/Users/UserDetails.jsx";
 import Meals from "./component/Mealdb/Meals.jsx";
+import MealDetails from "./component/Mealdb/MealDetails.jsx";
+import StyleHeader from "./component/StyleHeader/StyleHeader.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ const router = createBrowserRouter([
     element: <Home></Home>,
     errorElement: <Error></Error>,
     children: [
+      {
+        path: "/",
+        element: <StyleHeader></StyleHeader>
+      },
       {
         path: "/about",
         element: <About></About>,
@@ -68,6 +74,11 @@ const router = createBrowserRouter([
         path: "/meals",
         loader: ()=> fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=a"),
         element: <Meals></Meals>
+      },
+      {
+        path: "/meals/:mealId",
+        loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.mealId}`),
+        element: <MealDetails></MealDetails>
       }
     ],
   }

@@ -8,7 +8,7 @@ const Meals = () => {
 
   return (
     <div>
-      <h2>Latest Meals: {meals.length}</h2>
+      <h2>Latest Meals</h2>
       <div className="meals">
       {
         meals.map(soloMeal => <Meal key={soloMeal.idMeal} getMeal={soloMeal}></Meal>)

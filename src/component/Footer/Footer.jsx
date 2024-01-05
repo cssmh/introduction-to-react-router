@@ -1,7 +1,8 @@
 const Footer = () => {
     return (
-        <div style={{marginTop: "70px", color: "orange"}}>
+        <div style={{color: "orange"}}>
             <h2>Thanks for visiting our website</h2>
+            <p>© 2024 NestedRoutes Proudly built in the BD </p>
         </div>
     );
 };
