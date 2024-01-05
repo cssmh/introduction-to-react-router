@@ -15,8 +15,8 @@ import PhoneDetails from "./component/Phones/PhoneDetails.jsx";
 import Posts from "./component/Posts/Posts.jsx";
 import Users from "./component/Users/Users.jsx";
 import UserDetails from "./component/Users/UserDetails.jsx";
-import Meals from "./component/Mealdb/Meals.jsx";
-import MealDetails from "./component/Mealdb/MealDetails.jsx";
+import Meals from "./component/Meal/Meals.jsx";
+import MealDetails from "./component/Meal/MealDetails.jsx";
 import StyleHeader from "./component/StyleHeader/StyleHeader.jsx";
 
 const router = createBrowserRouter([
