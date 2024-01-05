@@ -18,6 +18,7 @@ import UserDetails from "./component/Users/UserDetails.jsx";
 import Meals from "./component/Meal/Meals.jsx";
 import MealDetails from "./component/Meal/MealDetails.jsx";
 import StyleHeader from "./component/StyleHeader/StyleHeader.jsx";
+import Countries from "./component/Countries/Countries.jsx";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
         path: "/meals/:mealId",
         loader: ({params}) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.mealId}`),
         element: <MealDetails></MealDetails>
+      },
+      {
+        path: "/countries",
+        element: <Countries></Countries>
       }
     ],
   }
