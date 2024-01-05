@@ -4,17 +4,17 @@ import App from "./App.jsx";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./component/Home.jsx";
-import About from "./component/About.jsx";
-import ContactUs from "./component/ContactUs.jsx";
-import Blog from "./component/Blog.jsx";
-import Error from "./component/Error.jsx";
-import Users from "./component/Users.jsx";
-import UserDetails from "./component/UserDetails.jsx";
-import Posts from "./component/Posts.jsx";
-import PostDetails from "./component/PostDetails.jsx";
+import Home from "./component/Home/Home.jsx";
+import About from "./component/About/About.jsx";
+import ContactUs from "./component/ContactUs/ContactUs.jsx";
+import Blog from "./component/Blog/Blog.jsx";
+import Error from "./component/Error/Error.jsx";
+import PostDetails from "./component/Posts/PostDetails.jsx";
 import Phones from "./component/Phones/Phones.jsx";
 import PhoneDetails from "./component/Phones/PhoneDetails.jsx";
+import Posts from "./component/Posts/Posts.jsx";
+import Users from "./component/Users/Users.jsx";
+import UserDetails from "./component/Users/UserDetails.jsx";
 
 const router = createBrowserRouter([
   {

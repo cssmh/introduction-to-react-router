@@ -22,7 +22,7 @@ const Post = ({ getPost }) => {
 };
 
 Post.propTypes = {
-  getPost: PropTypes.object,
+  getPost: PropTypes.object
 };
 
 export default Post;

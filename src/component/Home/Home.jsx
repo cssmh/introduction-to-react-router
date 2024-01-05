@@ -1,7 +1,7 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import "./Home.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 import { ColorRing } from "react-loader-spinner";
 
 const Home = () => {
