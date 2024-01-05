@@ -15,6 +15,7 @@ import PhoneDetails from "./component/Phones/PhoneDetails.jsx";
 import Posts from "./component/Posts/Posts.jsx";
 import Users from "./component/Users/Users.jsx";
 import UserDetails from "./component/Users/UserDetails.jsx";
+import Meals from "./component/Mealdb/Meals.jsx";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
         path: "/phones/:phoneSlug",
         loader: ({params})=> fetch(`https://openapi.programming-hero.com/api/phone/${params.phoneSlug}`),
         element: <PhoneDetails></PhoneDetails>
+      },
+      {
+        path: "/meals",
+        loader: ()=> fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=a"),
+        element: <Meals></Meals>
       }
     ],
   }
