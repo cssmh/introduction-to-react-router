@@ -19,6 +19,7 @@ import Meals from "./component/Meal/Meals.jsx";
 import MealDetails from "./component/Meal/MealDetails.jsx";
 import StyleHeader from "./component/StyleHeader/StyleHeader.jsx";
 import Countries from "./component/Countries/Countries.jsx";
+import CountryDetails from "./component/Countries/CountryDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -84,6 +85,11 @@ const router = createBrowserRouter([
       {
         path: "/countries",
         element: <Countries></Countries>
+      },
+      {
+        path: "/countries/:nameCountry",
+        loader: ({params})=> fetch(`https://restcountries.com/v3.1/name/${params.nameCountry}`),
+        element: <CountryDetails></CountryDetails>
       }
     ],
   }
