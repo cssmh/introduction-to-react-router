@@ -21,7 +21,9 @@ const Home = () => {
           colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
         />
       ) : (
-        <Outlet></Outlet>
+        <div style={{minHeight: "55vh"}}>
+          <Outlet></Outlet>
+        </div>
       )}
       <Footer></Footer>
     </div>
